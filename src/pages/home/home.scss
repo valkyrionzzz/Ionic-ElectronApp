@@ -1,0 +1,31 @@
+page-home {
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+  padding-top: 4px;
+    }
+    ion-card{
+        background-color: #05B27C;
+    }
+    .md .menu-inner{
+        background-color: black;
+    }
+    .card card-md{
+        background-color: #FF633A;
+    }
+    .scroll-content{
+        background-color: #A2FFE2;
+    }
+    .toolbar-background-md {
+        background-color: #C3FFE2;
+    }
+}

@@ -1,0 +1,48 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <h3>Sign up for a free account</h3>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked >Email</ion-label>
+        <ion-input placeholder="Email address" type="email" [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked >Password</ion-label>
+        <ion-input placeholder="Password" type="password" [(ngModel)]="password">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>I accept the terms and conditions</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="tnc_accept" ></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <button ion-button color="primary" full (click)="registerUser()" >Sign up</button>
+      </ion-item>
+      <ion-item>
+        <button ion-button clear (click)="goLogin()">Already have an account? Sign in to your account</button>
+      </ion-item>
+      <ion-item>
+        <button ion-button clear (click)="showTC()">Our terms and conditions</button>
+      </ion-item>
+    </ion-list>
+</ion-content>

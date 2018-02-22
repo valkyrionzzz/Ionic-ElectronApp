@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h3>Messages</h3><h3>Share this id with others <p id="shareID"></p></h3>
+  
+  
+    <!--<ion-card>-->
+    <ion-scroll style="width:100%;height:40vh" scrollY="true">
+      <ion-list>
+        <ion-item *ngFor="let message of messages">
+          <ion-card text-wrap>
+            <p >{{ message }}    </p>
+          </ion-card>
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
+    <!--</ion-card>-->
+  
+    <ion-card>
+      <ion-item>
+        <ion-input [(ngModel)]="userText" placeholder="Enter text here" type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <button ion-button clear (click)="sendMsg(userText)">SEND</button>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-input [(ngModel)]="nickname" placeholder="Change your nickname here" type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <button ion-button clear (click)="updateName(nickname)">Change</button>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-input [(ngModel)]="addUser" placeholder="Add user (email)" type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <button ion-button clear (click)="addUserToChannel(addUser)">Add</button>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-input [(ngModel)]="newChan" placeholder="Change Channel" type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <button ion-button clear (click)="changeChannel(newChan)">Change</button>
+      </ion-item>
+    </ion-card>
+    
+</ion-content>
